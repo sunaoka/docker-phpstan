@@ -1,4 +1,4 @@
-VERSION := 1.11.11
+VERSION := 1.12.0
 
 IMAGE := sunaoka/phpstan
 
