@@ -1,4 +1,4 @@
-VERSION := 1.12.2
+VERSION := 1.12.3
 
 IMAGE := sunaoka/phpstan
 
@@ -15,7 +15,7 @@ setup:
 
 build: setup
 	docker buildx use $(BUILDER)
-	docker buildx build --rm --no-cache --platform $(PLATFORM) $(BUILDER_ARGS) --push .
+	docker buildx build --rm --no-cache --pull --platform $(PLATFORM) $(BUILDER_ARGS) --push .
 	docker buildx rm $(BUILDER)
 
 .PHONY: all setup build
