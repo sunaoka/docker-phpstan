@@ -1,4 +1,4 @@
-VERSION := 1.12.7
+VERSION := 1.12.8
 
 IMAGE := sunaoka/phpstan
 
@@ -8,7 +8,7 @@ BUILDER := docker-phpstan-builder
 
 BUILDER_ARGS := --build-arg VERSION=$(VERSION) -t $(IMAGE):$(VERSION) -t $(IMAGE):latest
 
-all: build
+all: build test
 
 setup:
 	(docker buildx ls | grep $(BUILDER)) || docker buildx create --name $(BUILDER)
@@ -17,5 +17,8 @@ build: setup
 	docker buildx use $(BUILDER)
 	docker buildx build --rm --no-cache --pull --platform $(PLATFORM) $(BUILDER_ARGS) --push .
 	docker buildx rm $(BUILDER)
+
+test:
+	docker run --pull=always --rm sunaoka/phpstan:latest --version
 
 .PHONY: all setup build
