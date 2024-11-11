@@ -1,4 +1,4 @@
-VERSION := 1.12.8
+VERSION := 2.0.0
 
 IMAGE := sunaoka/phpstan
 
@@ -6,7 +6,7 @@ PLATFORM := linux/arm64,linux/amd64
 
 BUILDER := docker-phpstan-builder
 
-BUILDER_ARGS := --build-arg VERSION=$(VERSION) -t $(IMAGE):$(VERSION) -t $(IMAGE):latest
+BUILDER_ARGS := --build-arg VERSION=$(VERSION) -t $(IMAGE):$(VERSION) -t $(IMAGE):2 -t $(IMAGE):latest
 
 all: build test
 
