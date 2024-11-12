@@ -20,5 +20,6 @@ build: setup
 
 test:
 	docker run --pull=always --rm sunaoka/phpstan:latest --version
+	docker run --rm -v $(CURDIR):$(CURDIR) -w $(CURDIR) sunaoka/phpstan:latest analyse --ansi --memory-limit=-1 -v -c ./tests/phpstan.neon
 
 .PHONY: all setup build
