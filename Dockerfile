@@ -1,5 +1,7 @@
 # syntax=docker/dockerfile:1.4
 ARG VERSION
+
+# https://github.com/phpstan/phpstan/pkgs/container/phpstan
 FROM ghcr.io/phpstan/phpstan:${VERSION}
 
 RUN <<EOT sh -ex
