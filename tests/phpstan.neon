@@ -1,0 +1,11 @@
+includes:
+    - /composer/vendor/phpstan/phpstan-strict-rules/rules.neon
+    - /composer/vendor/phpstan/phpstan-phpunit/extension.neon
+    - /composer/vendor/phpstan/phpstan-mockery/extension.neon
+
+parameters:
+
+    level: 9
+
+    paths:
+        - ./
