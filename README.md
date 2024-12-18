@@ -3,6 +3,7 @@
 Docker image with the following extensions installed on phpstan.
 
 - [phpstan/phpstan-strict-rules](https://github.com/phpstan/phpstan-strict-rules)
+- [phpstan/phpstan-deprecation-rules](https://github.com/phpstan/phpstan-deprecation-rules)
 - [phpstan/phpstan-phpunit](https://github.com/phpstan/phpstan-phpunit)
 - [phpstan/phpstan-mockery](https://github.com/phpstan/phpstan-mockery)
 
@@ -13,6 +14,7 @@ You can update the `phpstan.neon` file in order to use the extension:
 ```neon
 includes:
     - /composer/vendor/phpstan/phpstan-strict-rules/rules.neon
+    - /composer/vendor/phpstan/phpstan-deprecation-rules/rules.neon
     - /composer/vendor/phpstan/phpstan-phpunit/extension.neon
     - /composer/vendor/phpstan/phpstan-mockery/extension.neon
 ```
