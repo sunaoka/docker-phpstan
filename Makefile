@@ -24,7 +24,7 @@ setup:
 	$(MAKE) test TAG=1
 
 2.x:
-	$(MAKE) build VERSION="2.1.10" LATEST_TAG="-t $(IMAGE):latest"
+	$(MAKE) build VERSION="2.1.11" LATEST_TAG="-t $(IMAGE):latest"
 	$(MAKE) test TAG=latest
 
 build: setup
