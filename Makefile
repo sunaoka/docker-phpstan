@@ -20,11 +20,11 @@ setup:
 	(docker buildx ls | grep $(BUILDER)) || docker buildx create --name $(BUILDER)
 
 1.x:
-	$(MAKE) build VERSION="1.12.23"
+	$(MAKE) build VERSION="1.12.24"
 	$(MAKE) test TAG=1
 
 2.x:
-	$(MAKE) build VERSION="2.1.11" LATEST_TAG="-t $(IMAGE):latest"
+	$(MAKE) build VERSION="2.1.12" LATEST_TAG="-t $(IMAGE):latest"
 	$(MAKE) test TAG=latest
 
 build: setup
