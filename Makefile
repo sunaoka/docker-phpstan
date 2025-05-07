@@ -1,5 +1,8 @@
 VERSION :=
 
+VERSION_1X := 1.12.25
+VERSION_2X := 2.1.14
+
 TAG :=
 
 IMAGE := sunaoka/phpstan
@@ -20,11 +23,11 @@ setup:
 	(docker buildx ls | grep $(BUILDER)) || docker buildx create --name $(BUILDER)
 
 1.x:
-	$(MAKE) build VERSION="1.12.25"
+	$(MAKE) build VERSION=$(VERSION_1X)
 	$(MAKE) test TAG=1
 
 2.x:
-	$(MAKE) build VERSION="2.1.13" LATEST_TAG="-t $(IMAGE):latest"
+	$(MAKE) build VERSION=$(VERSION_2X) LATEST_TAG="-t $(IMAGE):latest"
 	$(MAKE) test TAG=latest
 
 build: setup
