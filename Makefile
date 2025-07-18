@@ -42,4 +42,7 @@ test:
 push:
 	docker buildx build --push -t $(BUILD_ARG)
 
-.PHONY: all setup 1.x 2.x build test push
+release:
+	bash release.sh
+
+.PHONY: all setup 1.x 2.x build test push release
