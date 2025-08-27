@@ -9,4 +9,5 @@ RUN <<EOT sh -ex
   composer global require phpstan/phpstan-deprecation-rules
   composer global require phpstan/phpstan-phpunit
   composer global require phpstan/phpstan-mockery
+  composer global require spaze/phpstan-disallowed-calls
 EOT
