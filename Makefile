@@ -1,7 +1,7 @@
 VERSION :=
 
 VERSION_1X := 1.12.32
-VERSION_2X := 2.1.39
+VERSION_2X := 2.1.40
 
 TAG :=
 
@@ -17,7 +17,7 @@ TAGS := -t $(IMAGE):$(VERSION) -t $(IMAGE):$(basename $(basename $(VERSION)))
 
 LATEST_TAG :=
 
-all: 1.x 2.x
+all: 2.x
 
 setup:
 	(docker buildx ls | grep $(BUILDER)) || docker buildx create --name $(BUILDER)
