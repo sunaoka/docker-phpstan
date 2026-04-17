@@ -1,8 +1,9 @@
 # syntax=docker/dockerfile:1
-ARG VERSION
+# check=error=true
+ARG VERSION=latest
 
 # https://github.com/phpstan/phpstan/pkgs/container/phpstan
-FROM ghcr.io/phpstan/phpstan:${VERSION:-latest}
+FROM ghcr.io/phpstan/phpstan:${VERSION}
 
 RUN <<EOT sh -ex
   composer global require phpstan/phpstan-strict-rules
