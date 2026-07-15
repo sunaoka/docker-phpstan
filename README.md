@@ -7,6 +7,7 @@ Docker image with the following extensions installed on phpstan.
 - [phpstan/phpstan-phpunit](https://github.com/phpstan/phpstan-phpunit)
 - [phpstan/phpstan-mockery](https://github.com/phpstan/phpstan-mockery)
 - [spaze/phpstan-disallowed-calls](https://github.com/spaze/phpstan-disallowed-calls)
+- [shipmonk/dead-code-detector](https://github.com/shipmonk-rnd/dead-code-detector)
 
 ## Usage
 
@@ -19,6 +20,7 @@ includes:
     - /composer/vendor/phpstan/phpstan-phpunit/extension.neon
     - /composer/vendor/phpstan/phpstan-mockery/extension.neon
     - /composer/vendor/spaze/phpstan-disallowed-calls/extension.neon
+    - /composer/vendor/shipmonk/dead-code-detector/rules.neon
 ```
 
 ```bash
