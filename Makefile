@@ -1,7 +1,7 @@
 VERSION :=
 
 VERSION_1X := 1.12.33
-VERSION_2X := 2.2.5
+VERSION_2X := 2.2.6
 
 TAG :=
 
