@@ -24,5 +24,16 @@ includes:
 ```
 
 ```bash
+docker run --rm -v $(pwd):/app -w /app ghcr.io/sunaoka/docker-phpstan:latest:latest analyse --ansi --memory-limit=-1
+# or
 docker run --rm -v $(pwd):/app -w /app sunaoka/phpstan:latest analyse --ansi --memory-limit=-1
 ```
+
+## Container image
+
+- https://github.com/sunaoka/docker-phpstan/pkgs/container/docker-phpstan
+- https://hub.docker.com/r/sunaoka/phpstan
+
+## GitHub
+
+- https://github.com/sunaoka/docker-phpstan
